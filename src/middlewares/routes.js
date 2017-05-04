@@ -5,7 +5,7 @@ const axios = require('axios');
 
 const home = new Router();
 
-home.get('/', async (ctx) => {
+home.get('/cyxbsMobileTalk', async (ctx) => {
   const query = qs.parse(ctx.url.slice(2));
   
   const requestURL = `http://hongyan.cqupt.edu.cn/cyxbsMobile/index.php/Home/Topic/listTopicArticle?topic_id=${query.id}`;
