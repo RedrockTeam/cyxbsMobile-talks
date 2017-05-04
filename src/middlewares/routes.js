@@ -1,12 +1,11 @@
 const Router = require('koa-router');
-const qs = require('querystring');
 const axios = require('axios');
 
 
 const home = new Router();
 
-home.get('/cyxbsMobileTalk', async (ctx) => {
-  const query = qs.parse(ctx.url.slice(2));
+home.get('cyxbsMobileTalk', async (ctx) => {
+  const query = ctx.request.query;
   
   const requestURL = `http://hongyan.cqupt.edu.cn/cyxbsMobile/index.php/Home/Topic/listTopicArticle?topic_id=${query.id}`;
   let res = {};

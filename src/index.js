@@ -19,9 +19,7 @@ app.use(less(__dirname + '/public', {
 }));
 // less => css
 
-app.use(convert(koaStatic(path.join(__dirname, '/public'), {
-  pathPrefix: ''
-})));
+app.use(convert(koaStatic(path.join(__dirname, '/public'))));
 // 静态资源
 
 app.use(convert(bodyParser()));

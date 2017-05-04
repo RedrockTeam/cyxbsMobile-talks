@@ -15,6 +15,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-preset-es2015-node6": "^0.4.0",
     "babel-preset-stage-3": "^6.24.1",
+    "koa-static-plus": "^0.1.1",
     "supervisor": "^0.12.0"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "koa-router": "^7.1.1",
     "koa-session": "^5.0.0",
     "koa-static": "^3.0.0",
+    "koa-static-plus": "^0.1.1",
     "koa-views": "^6.0.2",
     "less-middleware": "^2.2.0"
   }
