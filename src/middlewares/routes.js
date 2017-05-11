@@ -48,7 +48,7 @@ home.get('cyxbsMobileTalk', async (ctx) => {
 });
 // 前端渲染模板的路由
 
-home.post('getList', async (ctx) => {
+home.post('cyxbsMobileTalk/list', async (ctx) => {
   ctx.body = await transferData(ctx.request.body.id);
 });
 // 提供给 node 做的中间层
