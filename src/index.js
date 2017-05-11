@@ -5,6 +5,7 @@ const views = require('koa-views');
 const path = require('path');
 const koaStatic = require('koa-static');
 const less = require('koa-less2x');
+const cors = require('koa-cors');
 
 const colors = require('./utils/colors');
 const router = require('./middlewares/routes');
@@ -22,6 +23,7 @@ app.use(less(__dirname + '/public', {
 app.use(convert(koaStatic(path.join(__dirname, '/public'))));
 // 静态资源
 
+app.use(convert(cors()));
 app.use(convert(bodyParser()));
 app.use(views(path.join(__dirname, '/views'), {
   extension: 'ejs'
