@@ -37,7 +37,9 @@
   <!-- 引入配置 -->
   <script src="http://hongyan.cqupt.edu.cn/api/share.js"></script>
   <script>
-      WXSHARE.config({debug: true});
+      WXSHARE.config({
+        debug: false
+      });
       WXSHARE.ready(function() {
         var option = {
             title: "掌上重邮话题分享",
@@ -58,7 +60,6 @@
         wx.onMenuShareQQ(option);
         wx.onMenuShareWeibo(option);
         wx.onMenuShareQZone(option);
-
     });
   </script>
 </html>
