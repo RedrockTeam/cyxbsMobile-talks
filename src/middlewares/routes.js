@@ -48,6 +48,19 @@ home.get('cyxbsMobileTalk', async (ctx) => {
 });
 // 前端渲染模板的路由
 
+home.get('cyxbsMobileTalk/react', async (ctx) => {
+  const query = ctx.request.query;
+  const list = await transferData(query.id);
+
+  await ctx.render('react', {
+    keyword,
+    content,
+    views,
+    titleImg,
+    articles
+  } = { ...list });
+});
+
 home.post('cyxbsMobileTalk/list', async (ctx) => {
   ctx.body = await transferData(ctx.request.body.id);
 });
