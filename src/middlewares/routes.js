@@ -53,7 +53,7 @@ home.get('cyxbsMobileTalk/react', async (ctx) => {
   //   titleImg,
   //   articles
   // } = { ...list });
-  await ctx.render('index');
+  await ctx.render('react');
 });
 
 home.post('cyxbsMobileTalk/list', async (ctx) => {
