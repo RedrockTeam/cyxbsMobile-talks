@@ -25,10 +25,40 @@
       -moz-osx-font-smoothing: grayscale;
     }
   </style>
-  <title><%= keyword %></title>
+  <title>#掌上重邮 话题#</title>
 </head>
   <body>
     <div id="main"></div>
     <script src="./public/bundle.js"></script>
   </body>
+  <!-- 引入微信 api -->
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+  <!-- 引入配置 -->
+  <script src="http://hongyan.cqupt.edu.cn/api/share.js"></script>
+  <script>
+      WXSHARE.config({debug: true});
+      WXSHARE.ready(function() {
+        var option = {
+            title: "掌上重邮话题分享",
+            link: window.location.href,
+            imgUrl: 'https://redrock.cqupt.edu.cn/files/logo.png',
+            desc: '我正在参加掌上重邮话题分享 大家快来吧',
+            type: '',
+            success: function() {
+                console.log('分享成功');
+            },
+            cancel: function() {
+                console.log('取消分享');
+            },
+        };
+
+        wx.onMenuShareTimeline(option);
+        wx.onMenuShareAppMessage(option);
+        wx.onMenuShareQQ(option);
+        wx.onMenuShareWeibo(option);
+        wx.onMenuShareQZone(option);
+
+    });
+  </script>
 </html>

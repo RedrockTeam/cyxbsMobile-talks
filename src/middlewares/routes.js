@@ -35,30 +35,25 @@ async function transferData (id) {
 }
 
 home.get('cyxbsMobileTalk', async (ctx) => {
-  const query = ctx.request.query;
-  const list = await transferData(query.id);
+  // const query = ctx.request.query;
+  // const list = await transferData(query.id);
 
-  await ctx.render('index', {
-    keyword,
-    content,
-    views,
-    titleImg,
-    articles
-  } = { ...list });
+  await ctx.render('index');
 });
 // 前端渲染模板的路由
 
 home.get('cyxbsMobileTalk/react', async (ctx) => {
-  const query = ctx.request.query;
-  const list = await transferData(query.id);
+  // const query = ctx.request.query;
+  // const list = await transferData(query.id);
 
-  await ctx.render('react', {
-    keyword,
-    content,
-    views,
-    titleImg,
-    articles
-  } = { ...list });
+  // await ctx.render('react', {
+  //   keyword,
+  //   content,
+  //   views,
+  //   titleImg,
+  //   articles
+  // } = { ...list });
+  await ctx.render('index');
 });
 
 home.post('cyxbsMobileTalk/list', async (ctx) => {
